@@ -16,5 +16,8 @@
         "url": "https://github.com/hobbyquaker/artnet/issues"
     },
     "license": "MIT",
-    "devDependencies": {}
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
 }
