@@ -1,0 +1,20 @@
+{
+    "version":      "0.0.1",
+    "name":         "artnet",
+    "description":  "Module to send commands to an Art-Net™ node",
+    "homepage":     "http://github.com/hobbyquaker/artnet",
+    "author":       "hobbyquaker <hq@ccu.io>",
+    "keywords":     ["artnet", "dmx", "lighting", "led", "rgb"],
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/hobbyquaker/artnet.git"
+    },
+    "main": "./lib/artnet.js",
+    "dependencies": {},
+    "bugs": {
+        "url": "https://github.com/hobbyquaker/artnet/issues"
+    },
+    "license": "MIT",
+    "devDependencies": {}
+}
