@@ -1,6 +1,6 @@
 # artnet
 
-[![NPM version](https://badge.fury.io/js/cul.svg)](http://badge.fury.io/js/artnet)
+[![NPM version](https://badge.fury.io/js/artnet.svg)](http://badge.fury.io/js/artnet)
 
 This is a [Node.js](http://nodejs.org) module that can be used to send commands to an [Art-Net™](http://en.wikipedia.org/wiki/Art-Net) node.    
 Art-Net™ Designed by and Copyright [Artistic Licence Holdings Ltd](http://www.artisticlicence.com/).
