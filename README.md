@@ -35,10 +35,11 @@ artnet.set({100: 255, 200: 127});
 
 ## Methods
 
-* **connect( host, port, universe, interval )**
+* **connect( host, port, universe, interval, interface )**
   * port (default ```6454```)
   * universe (default ```0```)
   * interval (if a number >= 50 is set, data will be send to the Art-Net node in given microsecond intervals)
+  * interface (optional string IP address - bind udp socket to specific network interface)
 
 * **set( )**
   * **set(** *number* **channel,** *number* **value,** *function* **callback )**
