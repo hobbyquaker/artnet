@@ -4,6 +4,9 @@
     "description":  "Module to send commands to an Art-Net node",
     "homepage":     "http://github.com/hobbyquaker/artnet",
     "author":       "hobbyquaker <hq@ccu.io>",
+    "contributors": [
+      "sparks-alec https://github.com/sparks-alec"
+    ],
     "keywords":     ["Art-Net", "artnet", "dmx", "DMX512", "stage lighting", "LED", "rgb"],
     "contributors": [],
     "repository": {
