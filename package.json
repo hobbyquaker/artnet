@@ -1,5 +1,5 @@
 {
-    "version":      "0.0.3",
+    "version":      "1.0.0",
     "name":         "artnet",
     "description":  "Module to send commands to an Art-Net node",
     "homepage":     "http://github.com/hobbyquaker/artnet",
