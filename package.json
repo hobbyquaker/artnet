@@ -1,14 +1,14 @@
 {
-    "version":      "1.0.3",
+    "version":      "1.0.4",
     "name":         "artnet",
     "description":  "Module to send commands to an Art-Net node",
     "homepage":     "http://github.com/hobbyquaker/artnet",
-    "author":       "hobbyquaker <hq@ccu.io>",
+    "author":       "hobbyquaker <hq@ccu.io> https://github.com/hobbyquaker",
     "contributors": [
-      "sparks-alec https://github.com/sparks-alec"
+        "sparks-alec https://github.com/sparks-alec",
+        "martinzuern https://github.com/martinzuern"
     ],
     "keywords":     ["Art-Net", "artnet", "dmx", "DMX512", "stage lighting", "LED", "rgb"],
-    "contributors": [],
     "repository": {
         "type": "git",
         "url": "git://github.com/hobbyquaker/artnet.git"
