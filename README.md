@@ -67,7 +67,7 @@ If error and response are null data remained unchanged and therefore nothing has
 Closes the connection and stops the send interval.
 
 
-#### **setHost( *string* **host** )**
+#### **setHost(** *string* **host** **)**
 
 Change the Art-Net hostname/address after initialization 
 
