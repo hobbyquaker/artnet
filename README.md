@@ -1,6 +1,8 @@
 # artnet
 
+[![License][mit-badge]][mit-url]
 [![NPM version](https://badge.fury.io/js/artnet.svg)](http://badge.fury.io/js/artnet)
+[![Dependency Status](https://img.shields.io/gemnasium/hobbyquaker/artnet.svg?maxAge=2592000)](https://gemnasium.com/github.com/hobbyquaker/artnet)
 
 This is a [Node.js](http://nodejs.org) module that can be used to send ArtDMX packages to an [Art-Net](http://en.wikipedia.org/wiki/Art-Net) node.
 
@@ -106,3 +108,6 @@ SOFTWARE.
 
 Art-Net™ Designed by and Copyright [Artistic Licence Holdings Ltd](http://www.artisticlicence.com/).
 
+
+[mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
+[mit-url]: LICENSE
