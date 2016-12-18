@@ -1,6 +1,8 @@
 # artnet
 
+[![License][mit-badge]][mit-url]
 [![NPM version](https://badge.fury.io/js/artnet.svg)](http://badge.fury.io/js/artnet)
+[![Dependency Status](https://img.shields.io/gemnasium/hobbyquaker/artnet.svg?maxAge=2592000)](https://gemnasium.com/github.com/hobbyquaker/artnet)
 
 This is a [Node.js](http://nodejs.org) module that can be used to send ArtDMX packages to an [Art-Net](http://en.wikipedia.org/wiki/Art-Net) node.
 
@@ -25,7 +27,7 @@ The set method can set multiple channels at once:
 Use an array to set subsequent channels...
 ```javascript
 // set channel 100 to 10, channel 101 to 20 and channel 102 to 30
-artnet.set(100, [10, 20, 30]); 
+artnet.set(100, [10, 20, 30]);
 ```
 
 ...if you want to keep certain channels unchanged set them to null
@@ -48,6 +50,8 @@ This lib throttles the maximum send rate to ~40Hz. Unchanged data is refreshed e
   * port (Default ```6454```)
   * refresh (millisecond interval for sending unchanged data to the Art-Net node. Default ```4000```)
   * iface (optional string IP address - bind udp socket to specific network interface)
+  * sendAll (sends always the full DMX universe instead of only changed values. Default ```0```)
+
 
 ## Methods
 
@@ -69,7 +73,7 @@ Closes the connection and stops the send interval.
 
 #### **setHost(** *string* **host** **)**
 
-Change the Art-Net hostname/address after initialization 
+Change the Art-Net hostname/address after initialization
 
 
 # Further Reading
@@ -106,3 +110,6 @@ SOFTWARE.
 
 Art-Net™ Designed by and Copyright [Artistic Licence Holdings Ltd](http://www.artisticlicence.com/).
 
+
+[mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
+[mit-url]: LICENSE
