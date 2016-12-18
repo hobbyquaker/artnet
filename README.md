@@ -50,7 +50,7 @@ This lib throttles the maximum send rate to ~40Hz. Unchanged data is refreshed e
   * port (Default ```6454```)
   * refresh (millisecond interval for sending unchanged data to the Art-Net node. Default ```4000```)
   * iface (optional string IP address - bind udp socket to specific network interface)
-  * sendAll (sends always the full DMX universe instead of only changed values. Default ```0```)
+  * sendAll (sends always the full DMX universe instead of only changed values. Default ```false```)
 
 
 ## Methods
