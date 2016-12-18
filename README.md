@@ -27,7 +27,7 @@ The set method can set multiple channels at once:
 Use an array to set subsequent channels...
 ```javascript
 // set channel 100 to 10, channel 101 to 20 and channel 102 to 30
-artnet.set(100, [10, 20, 30]); 
+artnet.set(100, [10, 20, 30]);
 ```
 
 ...if you want to keep certain channels unchanged set them to null
@@ -50,6 +50,8 @@ This lib throttles the maximum send rate to ~40Hz. Unchanged data is refreshed e
   * port (Default ```6454```)
   * refresh (millisecond interval for sending unchanged data to the Art-Net node. Default ```4000```)
   * iface (optional string IP address - bind udp socket to specific network interface)
+  * sendAll (sends always the full DMX universe instead of only changed values. Default ```0```)
+
 
 ## Methods
 
@@ -71,7 +73,7 @@ Closes the connection and stops the send interval.
 
 #### **setHost(** *string* **host** **)**
 
-Change the Art-Net hostname/address after initialization 
+Change the Art-Net hostname/address after initialization
 
 
 # Further Reading
