@@ -6,7 +6,7 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![License][mit-badge]][mit-url]
 
-This is a [Node.js](http://nodejs.org) module that can be used to send ArtDMX packages to an [Art-Net](http://en.wikipedia.org/wiki/Art-Net) node.
+> This is a [Node.js](http://nodejs.org) module that can be used to send ArtDMX packages to an [Art-Net](http://en.wikipedia.org/wiki/Art-Net) node.
 
 ## Usage
 
