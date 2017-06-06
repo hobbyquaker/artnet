@@ -1,28 +1,39 @@
 {
-    "version":      "1.2.3",
-    "name":         "artnet",
-    "description":  "Module to send commands to an Art-Net node",
-    "homepage":     "http://github.com/hobbyquaker/artnet",
-    "author":       "hobbyquaker <hq@ccu.io> https://github.com/hobbyquaker",
-    "contributors": [
-        "sparks-alec https://github.com/sparks-alec",
-        "martinzuern https://github.com/martinzuern",
-        "solexious https://github.com/solexious",
-        "maxjoehnk https://github.com/maxjoehnk"
-    ],
-    "keywords":     ["Art-Net", "artnet", "dmx", "DMX512", "stage lighting", "LED", "rgb"],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/hobbyquaker/artnet.git"
-    },
-    "main": "./lib/artnet.js",
-    "dependencies": {},
-    "bugs": {
-        "url": "https://github.com/hobbyquaker/artnet/issues"
-    },
-    "license": "MIT",
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    }
+  "version": "1.2.3",
+  "name": "artnet",
+  "description": "Module to send commands to an Art-Net node",
+  "homepage": "http://github.com/hobbyquaker/artnet",
+  "author": "hobbyquaker <hq@ccu.io> https://github.com/hobbyquaker",
+  "contributors": [
+    "sparks-alec https://github.com/sparks-alec",
+    "martinzuern https://github.com/martinzuern",
+    "solexious https://github.com/solexious",
+    "maxjoehnk https://github.com/maxjoehnk"
+  ],
+  "keywords": [
+    "Art-Net",
+    "artnet",
+    "dmx",
+    "DMX512",
+    "stage lighting",
+    "LED",
+    "rgb"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hobbyquaker/artnet.git"
+  },
+  "main": "./lib/artnet.js",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/hobbyquaker/artnet/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "camo-purge": "latest",
+    "xo": "latest"
+  },
+  "scripts": {
+    "test": "camo-purge ; xo --space 4 --no-esnext --ignore test.js"
+  }
 }
