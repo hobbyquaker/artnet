@@ -1,8 +1,10 @@
 # artnet
 
-[![License][mit-badge]][mit-url]
 [![NPM version](https://badge.fury.io/js/artnet.svg)](http://badge.fury.io/js/artnet)
 [![Dependency Status](https://img.shields.io/gemnasium/hobbyquaker/artnet.svg?maxAge=2592000)](https://gemnasium.com/github.com/hobbyquaker/artnet)
+[![Build Status](https://travis-ci.org/hobbyquaker/artnet.svg?branch=master)](https://travis-ci.org/hobbyquaker/artnet)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+[![License][mit-badge]][mit-url]
 
 This is a [Node.js](http://nodejs.org) module that can be used to send ArtDMX packages to an [Art-Net](http://en.wikipedia.org/wiki/Art-Net) node.
 
@@ -75,6 +77,10 @@ Closes the connection and stops the send interval.
 
 Change the Art-Net hostname/address after initialization
 
+#### **setPort(** *number* **port** **)**
+
+Change the Art-Net port after initialization.
+Does not work when using the broadcast address `255.255.255.255`.
 
 # Further Reading
 
