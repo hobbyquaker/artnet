@@ -1,5 +1,5 @@
 {
-  "version": "1.3.2",
+  "version": "1.3.3",
   "name": "artnet",
   "description": "Module to send commands to an Art-Net node",
   "homepage": "http://github.com/hobbyquaker/artnet",
@@ -9,7 +9,8 @@
     "martinzuern https://github.com/martinzuern",
     "solexious https://github.com/solexious",
     "maxjoehnk https://github.com/maxjoehnk",
-    "hibas123 https://github.com/hibas123"
+    "hibas123 https://github.com/hibas123",
+    "margau https://github.com/margau"
   ],
   "keywords": [
     "Art-Net",
