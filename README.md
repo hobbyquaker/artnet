@@ -44,6 +44,16 @@ you can omit the channel, it defaults to 1
 artnet.set([255, 127]);
 ```
 
+Additionally, you can send trigger macros to devices.
+
+```javascript
+// Send key 3, subkey 1 to all devices.
+artnet.trigger(1, 3);
+
+// Send key 2, subkey 71 (the letter 'G') to ArtNet Devices responding to 0x6A6B.
+artnet.trigger(27243, 71, 2);
+```
+
 This lib throttles the maximum send rate to ~40Hz. Unchanged data is refreshed every ~4s.
 
 ## Options
@@ -67,6 +77,20 @@ Defaults: universe = 0, channel = 1
 Callback is called with (error, response) params.
 If error and response are null data remained unchanged and therefore nothing has been sent.
 
+#### **trigger(** [ [ *uint15* **oem** , ] *uint9* **subkey** , ] *uint8* **key** [ , *function(err, res)* **callback** ] **)**
+
+Sends an ArtNet ArtTrigger packet. ArtTriggers are typically device specific and perform functions like starting and stopping shows.
+
+Every parameter except the `key` is optional.  If you supply an `oem`, you need to supply a `subkey` also.
+
+Defaults:
+
+* `oem` = `0xFFFF`
+* `subkey` = `null`
+
+Callback is called with `(error, response)` params.
+
+`trigger`s are NEVER throttled, as they are time sensitive. They are always sent immediately upon processing.
 
 #### **close( )**
 
