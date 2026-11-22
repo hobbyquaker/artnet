@@ -1,42 +1,77 @@
 {
-  "version": "1.4.0",
-  "name": "artnet",
-  "description": "Module to send commands to an Art-Net node",
-  "homepage": "http://github.com/hobbyquaker/artnet",
-  "author": "hobbyquaker <hq@ccu.io> https://github.com/hobbyquaker",
-  "contributors": [
-    "sparks-alec https://github.com/sparks-alec",
-    "martinzuern https://github.com/martinzuern",
-    "solexious https://github.com/solexious",
-    "maxjoehnk https://github.com/maxjoehnk",
-    "hibas123 https://github.com/hibas123",
-    "margau https://github.com/margau",
-    "Justin J. Novack https://github.com/jnovack"
-  ],
-  "keywords": [
-    "Art-Net",
-    "artnet",
-    "dmx",
-    "DMX512",
-    "stage lighting",
-    "LED",
-    "rgb"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hobbyquaker/artnet.git"
-  },
-  "main": "./lib/artnet.js",
-  "dependencies": {},
-  "bugs": {
-    "url": "https://github.com/hobbyquaker/artnet/issues"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "camo-purge": "latest",
-    "xo": "latest"
-  },
-  "scripts": {
-    "test": "camo-purge ; xo --space 4 --no-esnext --ignore test.js"
-  }
+    "name": "artnet",
+    "version": "2.0.0",
+    "description": "Send ArtDmx and ArtTrigger packets to Art-Net nodes - DMX512 over IP for stage lighting",
+    "type": "module",
+    "main": "./lib/artnet.js",
+    "types": "./index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./index.d.ts",
+            "default": "./lib/artnet.js"
+        },
+        "./lib/artnet.js": {
+            "types": "./index.d.ts",
+            "default": "./lib/artnet.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "lib/",
+        "index.d.ts",
+        "examples/",
+        "CHANGELOG.md"
+    ],
+    "engines": {
+        "node": "^20.19.0 || ^22.12.0 || >=24"
+    },
+    "scripts": {
+        "test": "node --test && npm run test:types",
+        "test:coverage": "node --test --experimental-test-coverage --test-coverage-include='lib/**' --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100",
+        "test:types": "tsc -p types-test/tsconfig.json",
+        "test:package": "node .github/test-package.js",
+        "test:watch": "node --test --watch",
+        "lint": "eslint . && prettier --check .",
+        "lintfix": "eslint --fix . && prettier --write ."
+    },
+    "keywords": [
+        "Art-Net",
+        "artnet",
+        "ArtDmx",
+        "ArtTrigger",
+        "dmx",
+        "DMX512",
+        "stage lighting",
+        "lighting",
+        "LED",
+        "rgb"
+    ],
+    "author": "Sebastian Raff <hobbyquaker@gmail.com> (https://github.com/hobbyquaker)",
+    "contributors": [
+        "sparks-alec https://github.com/sparks-alec",
+        "martinzuern https://github.com/martinzuern",
+        "solexious https://github.com/solexious",
+        "maxjoehnk https://github.com/maxjoehnk",
+        "hibas123 https://github.com/hibas123",
+        "margau https://github.com/margau",
+        "Justin J. Novack https://github.com/jnovack",
+        "Kyle Hensel https://github.com/k-yle"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hobbyquaker/artnet.git"
+    },
+    "bugs": {
+        "url": "https://github.com/hobbyquaker/artnet/issues"
+    },
+    "homepage": "https://github.com/hobbyquaker/artnet",
+    "license": "MIT",
+    "devDependencies": {
+        "@eslint/js": "^10.0.0",
+        "@types/node": "^24.0.0",
+        "eslint": "^10.0.0",
+        "globals": "^17.0.0",
+        "prettier": "^3.9.0",
+        "typescript": "^5.9.0"
+    }
 }
