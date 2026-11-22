@@ -1,2 +1,7 @@
+node_modules
+coverage
+*.tgz
 .idea
-node_module
+.DS_Store
+HANDOFF.md
+ROADMAP.md

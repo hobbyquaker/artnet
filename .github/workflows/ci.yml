@@ -1,0 +1,47 @@
+name: CI
+
+on:
+    push:
+        branches: [master]
+    pull_request:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                node: ['20.19', 22, 24]
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node }}
+                  cache: npm
+            - run: npm ci
+            - run: npm run lint
+            - run: npm test
+
+    coverage:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 24
+                  cache: npm
+            - run: npm ci
+            # fails below 100 % lines, branches or functions
+            - run: npm run test:coverage
+
+    # the tarball as npm would publish it, installed into an empty project and loaded both ways
+    package:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: npm
+            - run: npm ci
+            - run: npm run test:package
