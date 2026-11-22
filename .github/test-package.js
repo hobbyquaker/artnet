@@ -19,7 +19,10 @@ const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'artnet-package-'));
 const run = (cmd, args, cwd) => execFileSync(cmd, args, {cwd, encoding: 'utf8', stdio: ['ignore', 'pipe', 'inherit']});
 
 try {
-    const [{filename, files}] = JSON.parse(run('npm', ['pack', '--json', '--pack-destination', dir], root));
+    // npm up to 11 prints an array, npm 12 an object keyed by package name
+    const [{filename, files}] = Object.values(
+        JSON.parse(run('npm', ['pack', '--json', '--pack-destination', dir], root)),
+    );
     const packed = files.map((f) => f.path).sort();
     console.log(filename + '\n  ' + packed.join('\n  '));
     for (const file of ['lib/artnet.js', 'index.d.ts', 'README.md', 'CHANGELOG.md', 'LICENSE', 'package.json']) {

@@ -43,5 +43,7 @@ jobs:
               with:
                   node-version: 22
                   cache: npm
+            # as the release workflow does
+            - run: npm install -g npm@latest
             - run: npm ci
             - run: npm run test:package
