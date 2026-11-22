@@ -17,10 +17,10 @@ jobs:
     npm:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v5
               with:
                   ref: ${{ inputs.tag || github.ref }}
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v5
               with:
                   node-version: 22
                   registry-url: https://registry.npmjs.org
@@ -40,10 +40,10 @@ jobs:
         steps:
             # default branch checkout (not the tag) so the notes script is present even when
             # releasing an older tag via workflow_dispatch; the script reads the CHANGELOG from the tag
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v5
               with:
                   fetch-depth: 0
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v5
               with:
                   node-version: 22
             - name: Generate release notes
